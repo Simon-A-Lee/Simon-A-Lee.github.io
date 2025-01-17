@@ -45,7 +45,7 @@ scholar_userid: rdQAAAAJ&hl # your Google Scholar ID
 x_username: SimonLee79475 # your X handle
 youtube_id: youtube.com/@simonlee.a # your youtube channel id (youtube.com/@<youtube_id>)
 # zotero_username: # your zotero username
-custom_social: # can be any name here other than the ones already defined above
-  logo: /Users/simonlee/Simon-A-Lee.github.io/assets/img/simon.jpg # can be png, svg, jpg
-  title: Custom Social
-  url: https://www.alberteinstein.com/
+# custom_social: # can be any name here other than the ones already defined above
+#   logo: /Users/simonlee/Simon-A-Lee.github.io/assets/img/simon.jpg # can be png, svg, jpg
+#   title: Custom Social
+#   url: https://www.alberteinstein.com/

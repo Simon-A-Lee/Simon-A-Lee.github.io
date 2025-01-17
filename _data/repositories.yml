@@ -1,14 +1,11 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - Simonlee711
 
 repo_description_lines_max: 2
 
 github_repos:
-  - alshedivat/al-folio
-  - jekyll/jekyll
-  - twbs/bootstrap
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - mathjax/MathJax
-  - jpswalsh/academicons
+  - Simonlee711/MEME
+  - Simonlee711/antibiotics-fm-benchmark
+  - Simonlee711/FEET
+  - Simonlee711/ABP_Imputation-With-EHR
+  - Simonlee711/Find_My_Bread

@@ -5,6 +5,6 @@ inline: true
 related_posts: false
 ---
 
-I attended [ICML](https://icml.cc/Conferences/2024) to present joined work with Kyoka Ono about using small language models to solve tabular tasks
+I attended [ICML](https://icml.cc/Conferences/2024) to present joined work with Kyoka Ono about using small language models to solve tabular tasks in Vienna, Austria.
 
 

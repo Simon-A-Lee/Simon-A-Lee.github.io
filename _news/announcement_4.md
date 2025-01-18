@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I put out my first preprint: MEME
+I put out my first preprint [MEME](https://arxiv.org/abs/2402.00160)

@@ -23,13 +23,6 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/repositories/";
           },
-        },{id: "nav-people",
-          title: "people",
-          description: "members of the lab or group",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/people/";
-          },
         },{id: "dropdown-publications",
               title: "publications",
               description: "",
@@ -37,19 +30,12 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "";
               },
-            },{id: "dropdown-projects",
-              title: "projects",
+            },{id: "dropdown-repositories",
+              title: "repositories",
               description: "",
               section: "Dropdown",
               handler: () => {
                 window.location.href = "";
-              },
-            },{id: "dropdown-blog",
-              title: "blog",
-              description: "",
-              section: "Dropdown",
-              handler: () => {
-                window.location.href = "/blog/";
               },
             },{id: "post-a-post-with-image-galleries",
       
@@ -413,13 +399,10 @@ ninja.data = [{
           title: 'I begin my Ph.D. at UCLA working under Dr. Jeffrey Chiang',
           description: "",
           section: "News",},{id: "news-i-put-out-my-first-preprint-meme",
-          title: 'I put out my first preprint: MEME',
+          title: 'I put out my first preprint MEME',
           description: "",
           section: "News",},{id: "news-i-was-awarded-the-warren-alpert-computational-biology-and-ai-network-fellowship",
           title: 'I was awarded the Warren Alpert Computational Biology and AI Network Fellowship',
-          description: "",
-          section: "News",},{id: "news-helio-s-summer-project-gets-accepted-into-ai-for-medicine-and-healthcare-aaai-bridge-program-and-wins-runner-up-best-paper",
-          title: 'Helio’s Summer Project gets accepted into AI for Medicine and Healthcare AAAI Bridge...',
           description: "",
           section: "News",},{id: "news-i-attended-icml-to-present-joined-work-with-kyoka-ono-about-using-small-language-models-to-solve-tabular-tasks-in-vienna-austria",
           title: 'I attended ICML to present joined work with Kyoka Ono about using small...',
@@ -427,11 +410,14 @@ ninja.data = [{
           section: "News",},{id: "news-i-attended-icml-to-present-joined-work-with-kyoka-ono-about-using-small-language-models-to-solve-tabular-tasks",
           title: 'I attended ICML to present joined work with Kyoka Ono about using small...',
           description: "",
+          section: "News",},{id: "news-feet-and-meds-dev-gets-accepted-to-be-presented-at-neurips-as-well-as-ml4h-conference-in-vancouver-canada",
+          title: 'FEET and MEDS-DEV gets accepted to be presented at NeurIPS as well as...',
+          description: "",
           section: "News",},{id: "news-simon-s-project-proposal-gets-selected-by-openai",
           title: 'Simon’s project proposal gets selected by OpenAI',
           description: "",
-          section: "News",},{id: "news-feet-gets-accepted-to-be-presented-at-neurips-as-well-as-ml4h-conference-in-vancouver-canada",
-          title: 'FEET gets accepted to be presented at NeurIPS as well as ML4H conference...',
+          section: "News",},{id: "news-helio-s-summer-project-gets-accepted-into-ai-for-medicine-and-healthcare-aaai-bridge-program-and-wins-runner-up-best-paper",
+          title: 'Helio’s Summer Project gets accepted into AI for Medicine and Healthcare AAAI Bridge...',
           description: "",
           section: "News",},{id: "projects-project-1",
           title: 'project 1',
@@ -493,13 +479,6 @@ ninja.data = [{
           window.open("https://github.com/Simonlee711", "_blank");
         },
       },{
-        id: 'social-inspire',
-        title: 'Inspire HEP',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://inspirehep.net/authors/1010907", "_blank");
-        },
-      },{
         id: 'social-instagram',
         title: 'Instagram',
         section: 'Socials',
@@ -512,20 +491,6 @@ ninja.data = [{
         section: 'Socials',
         handler: () => {
           window.open("https://www.linkedin.com/in/simon-a-lee-b71525319", "_blank");
-        },
-      },{
-        id: 'social-orcid',
-        title: 'ORCID',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://orcid.org/0000-0002-3324-9772", "_blank");
-        },
-      },{
-        id: 'social-rss',
-        title: 'RSS Feed',
-        section: 'Socials',
-        handler: () => {
-          window.open("/feed.xml", "_blank");
         },
       },{
         id: 'social-scholar',

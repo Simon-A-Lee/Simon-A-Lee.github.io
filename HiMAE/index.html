@@ -71,7 +71,7 @@
                 Subramaniam Venkatraman<sup>1</sup>&nbsp;&nbsp;&nbsp;
                 Sharanya Desai<sup>1</sup>&nbsp;&nbsp;&nbsp;
                 <br /><sup>1</sup>Digital Health Team, Samsung Research America&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<sup>2</sup> Department of Computational Medicine, UCLA
-                <span class="brmod" style="color:rgb(183, 0, 0)"><b>2024</b></span>
+                <span class="brmod" style="color:rgb(183, 0, 0)"><b>2026</b></span>
               </span>
             </div>
             <div class="column has-text-centered">
@@ -139,11 +139,11 @@
       <div class="hero-body">
         <div align="center">
           <!-- Replace video with an image -->
-          <img src="./resources/Dalle.png" alt="VRB Initial Scene" width="100%">
+          <img src="./resources/himae.png" alt="VRB Initial Scene" width="100%">
         </div>
         <br>
         <h2 class="subtitle has-text-centered">
-          Dall-E's attempt at visualizing the Clinical Pseudo-notes methodology. Close...
+          Dall-E's attempt at visualizing HiMAE...
         </h2>
       </div>
     </div>
@@ -162,7 +162,7 @@
       <div class="columns is-centered has-text-centered">
         <div class="column is-two-thirds ">
           <div class="content has-text-justified">
-            In this work, we introduce the Multiple Embedding Model for EHR (MEME), an approach that serializes multimodal EHR tabular data into text using pseudo-notes, mimicking clinical text generation. This conversion not only preserves better representations of categorical data and learns contexts but also enables the effective employment of pretrained foundation models for rich feature representation. To address potential issues with context length, our framework encodes embeddings for each EHR modality separately. We demonstrate the effectiveness of MEME by applying it to several decision support tasks within the Emergency Department across multiple hospital systems. Our findings indicate that MEME outperforms traditional machine learning, EHR-specific foundation models, and general LLMs, highlighting its potential as a general and extendible EHR representation strategy.
+            Wearable sensors provide abundant physiological time series observations, yet the resolution at which we should extract features for downstream tasks remain unclear. We hypothesize that temporal resolution is a fundamental axis of representation learning, with different clinical and behavioral outcomes relying on features at distinct scales. To test this resolution hypothesis, we introduce HiMAE (Hierarchical Masked Autoencoder), a self-supervised framework that combines masked autoencoding with a hierarchical convolutional encoder–decoder. HiMAE produces multi-resolution embeddings across its intermediate layers that enable systematic evaluation of which temporal scales carry predictive signal, transforming resolution from a hyperparameter into a probe for interpretability. Across classification and generative benchmarks, HiMAE consistently outperforms state-of-the-art foundation models that collapse scale, while being orders of magnitude smaller. Due to the convolution based design choices behind HiMAE, the model is also compact enough to run entirely on-device, achieving sub-millisecond inference on smartwatch-class CPUs for true edge inference. Together, these contributions position HiMAE as both an efficient self supervised learning method and a discovery tool for understanding how time resolution contributes to downstream task alignment.  
           </div>
         </div>
         </div>
@@ -176,41 +176,16 @@
     <div class="container">
       <div class="columns is-centered">
         <div class="column is-full-width">
-          <h1 class="title is-2" style="text-align: center; padding-bottom: 10px;">Transforming Electronic Health Records into text</h1>
+          <h1 class="title is-2" style="text-align: center; padding-bottom: 10px;">The Resolution Hypothesis</h1>
           <!-- <h2 class="subtitle is-4" style="text-align: center;">Defining Visual Affordances</h2> -->
 
           <div class="columns is-centered has-text-centered">
           <div class="column is-two-thirds ">
           <div class="content has-text-justified">
             <p>
-            One of our main contributions in our methodology is turning tabular Electronic Health Records (EHR) data into textual representations. By Doing so we are able to leverage pre-trained language models for feature representation. Given that the open source community continues to develop more advanced language models, we believe that this approach will be just as effective in the future.  
+              The resolution hypothesis emphasizes that meaningful patterns in time-dependent data can emerge at different time scales. In many real-world signals—such as data from wearables, sensors, or human behavior—important information may appear as rapid, moment-to-moment fluctuations or as slower, long-term trends. Relying on a single, fixed time scale can obscure these signals. By explicitly considering multiple temporal resolutions, models can better capture the structure of the data and reveal which time scales are most relevant for a particular outcome. In this view, resolution is not merely a technical detail, but a fundamental lens for understanding complex time-dependent phenomena.
             </p>
           </div>
-        </div>
-      </div>
-        
-      <div class="column" style="text-align: center;">
-            <img src="resources/model.png" alt="Image description" width="40%">
-        </div>
-          <br>
-          <br>
-          <h2 class="subtitle is-4" style="text-align: center;">What are Electronic Health Records and Why are they important?</h2>
-          <div class="columns is-centered">
-            <div class="column is-full" style="text-align: center;">
-              <img src="resources/EHR.png" alt="Image description" width="40%">
-              <br>
-              <br>
-              <div class="columns is-centered has-text-centered">
-                <div class="column is-two-thirds">
-                <div class="content has-text-justified interpolation-panel">
-                    <p style="text-align: center;font-size: 18px"> An Electronic Health Record (EHR) is a digital version of a patient’s medical history that is maintained by the provider over time. It goes beyond the standard clinical data collected in a provider's office and can be inclusive of a broader view of a patient's care. EHRs are designed to contain and share information from all providers involved in a patient’s care. This can include demographics, progress notes, problems, medications, vital signs, past medical history, immunizations, laboratory data, and radiology reports. <br><br> EHR archives can be used to generate insights, test hypotheses, and develop predictive models. Most applications using the EHR models for decision support manifest as risk stratification models, or early warning systems. These applications ingest hand-identified and crafted EHR features to make a binary decision, which can be implemented as a flag
- 
-                    </p>
-                </div>
-              </div>
-            </div>
-            <br>
-              
         </div>
       </div>
     
@@ -218,18 +193,18 @@
       <div class="container">
         <div class="columns is-centered">
           <div class="column is-full-width">
-            <h1 class="title is-2" style="text-align: center; padding-bottom: 10px;">Multiple Embedding Model for EHR (MEME) Architecture</h1>
+            <h1 class="title is-2" style="text-align: center; padding-bottom: 10px;">Building a Modeling Framework to Answer the Resolution Hypothesis</h1>
             <!-- <h2 class="subtitle is-4" style="text-align: center;">Defining Visual Affordances</h2> -->
             <div class="column" style="text-align: center;">
-              <img src="resources/MEME.png" alt="Image description" width="40%">
+              <img src="resources/model.png" alt="Image description" width="40%">
           </div>
   
             <div class="columns is-centered has-text-centered">
             <div class="column is-two-thirds ">
             <div class="content has-text-justified">
               <p>
-                Our second main contribution is the Multiple Embedding Model for EHR architecture. We designed a methodology that takes pre-trained language models as representation models to generate multiple embeddings for our varying EHR input (e.g. medication, vitals, demographics). We then concatenate these embeddings and send this "patient embedding" through an additional self-attention layer where it learns the most important part of the inputs from the entire patient embedding. This model then gets fed to a MLP where it will be used for various downstream tasks in the Emergency Department.
-               </p>
+              HiMAE (Hierarchical Masked Autoencoder) is a simple, interpretable way to test and act on the resolution hypothesis: instead of forcing a model to compress every temporal pattern into a single representation, HiMAE produces a stack of embeddings, each associated with a different effective temporal scale. At a high level the model takes a multichannel sequence \(x\in\mathbb{R}^{C\times L}\), breaks it into non-overlapping patches (so \(N=L/P\) patches of length \(P\)), and randomly occludes a subset via a mask \(m\in\{0,1\}^N\) (expanded to the full time axis as \(m'\in\{0,1\}^L\)). The training objective is the familiar masked reconstruction loss applied only to masked positions: </p> <p class="math"> \(\displaystyle \mathcal{L}(\theta,\phi) \;=\;\sum_{t=1}^{L}\frac{m'_t}{\sum_{u}m'_u}\,\big\lVert\hat x_t - x_t\big\rVert^2,\) </p> <p> with \(\hat x=g_{\phi}(f_{\theta}(\tilde x))\) where \(\tilde x\) denotes the partially observed input. The crucial architectural choice is that \(f_{\theta}\) is a hierarchical 1-D U-Net style encoder: successive downsampling stages increase the receptive field so that each intermediate activation summarizes a progressively coarser temporal context. Rather than collapsing those activations into a single pooled vector, HiMAE exposes them as separate embeddings and evaluates each with a lightweight probe; this conversion of scale from a hyperparameter into an empirical probe is what lets HiMAE directly answer which temporal resolutions carry signal for a downstream task. </p> <p> From a modeling-efficiency standpoint, U-Net hierarchies approximate the ability to access long-range context while remaining linear in sequence length. A D-layer hierarchical encoder expands an effective receptive field \(R_d\) roughly as \(\;R_d = R_{d-1} + (k-1)\prod_{i=1}^{d-1}s_i\;\) (where \(k\) is kernel size and \(s_i\) the stride at stage \(i\)), so depth yields exponential coverage in terms of strides while computation scales as \(O(L)\) for convolutional contractions and expansions. By contrast, full self-attention used in many transformer variants incurs \(O(L^2)\) time and memory in the sequence length due to the attention matrix. In practice this means a well-designed U-Net can capture the same coarse, global dependencies that attention provides but at a fraction of compute and memory, which enables smaller models, faster training, and truly on-device inference. </p> <p> Conceptually, HiMAE therefore performs two things at once. It leverages masked reconstruction to learn temporally coherent features and it preserves the hierarchy of scales so those features can be inspected and compared. If a clinical label is best predicted from millisecond-scale morphology, the shallow embeddings will carry the signal; if a behavioral outcome depends on slow trends, deeper embeddings will dominate. Because the architecture is compact, these discoveries can be made without resorting to very large transformer models, making HiMAE a practical tool both for improving predictive performance and for surfacing which temporal resolutions matter in real-world time-series data.  
+              </p>
             </div>
           </div>
         </div>

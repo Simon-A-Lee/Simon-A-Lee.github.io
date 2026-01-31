@@ -210,18 +210,6 @@
         </div>
 
         <br>
-        <br>
-        <h2 class="subtitle is-4" style="text-align: center;">Why Multiple Embeddings?</h2>
-        <div class="columns is-centered">
-          <div class="column is-full" style="text-align: center;">
-            <div class="columns is-centered has-text-centered">
-              <div class="column is-two-thirds">
-              <div class="content has-text-justified interpolation-panel">
-                  <p style="text-align: center;font-size: 18px"> Our research demonstrates that multimodal embeddings offer superior performance, partly due to their ability to handle shorter context lengths a current bottleneck of the BERT architecture. We initially hypothesized that the use of multiple embeddings allows for comprehensive representation across diverse biological and temporal scales and different domains. By employing separate embeddings for molecular scale data (such as lab measurements and medications), system-level observations (including vital signs and diagnostic decisions), and external influences (like patient arrival times), we can capture unique aspects of patient attributes. This method provides a holistic understanding and enhances the effectiveness of patient care management, serving as our rationale for representing these concepts distinctly.</p>
-              </div>
-            </div>
-          </div>
-          <br>
             
       </div>
     </div>
@@ -236,18 +224,67 @@
             <div class="column is-two-thirds ">
             <div class="content has-text-justified">
               <p>
-                To test our new architecture, we performed an evaluation benchmark of the MEME model on various ED disposition and decompensation tasks. We asked the models in the benchmark to predict whether a patient should be admitted to the Emergency Room at the time of their visit. From the subset of patients who were admitted, we conducted a multilabel classification task where we asked the models to predict whether admitted patients would be discharged home during their admission, needed to be admitted to the intensive care unit, or would die during their stay. We showcase the prevalences of these tasks in Table 1 below, where each subsequent task is deemed to be more difficult than the previous one.
-
-              <div class="column" style="text-align: center;">
-                <img src="resources/prevalance.png" alt="Image description" width="80%">
-            </div>
-
-            In our study we compared our method to three traditional machine learning models defined in a previous ED benchmark (logistic regression, random forest, and MLP), two EHR-foundation models (EHR-shot, and GenHPF), and a GPT3.5-turbo generative model. We evaluated all methods on the F1 score, the Area under the Reciever Operating Characteristic (AUROC), and the Area under the Precision Recall Curve (AUPRC).
-
+                Pretraining uses approximately 80,000 hours of wearable green PPG collected from tens of thousands of participants across multiple devices collected at Samsung Research Centers. Windows of 10 s at 100 Hz (L = 1000) are divided into patches. Optimization uses AdamW with warmup–cosine schedule; models trained up to 100k steps with large-batch protocols.
               </p>
+              <p>
+                We assess generative reconstruction under three regimes—random imputation, temporal interpolation (contiguous gaps), and temporal extrapolation (future occlusion)—using held-out MSE and \(R^2\).
+                For classification, we linear-probe pretrained encoders on 12 binary tasks across cardiovascular conditions, sleep staging, and abnormal laboratory prediction, reporting AUROC with bootstrapped confidence intervals.
+              </p>
+              
+              <div class="column" style="text-align: center;">
+                <img src="resources/heatmp.png" alt="Image description" width="80%">
+              </div>
+
+              <p>
+                A central contribution is the resolution probe: embeddings are extracted at multiple encoder depths (each representing a different effective temporal resolution) and probed independently. Different downstream tasks peak at different layers, revealing that predictive information is concentrated at task-specific temporal scales. This validates the resolution hypothesis and shows the model can be used as a discovery tool to determine the most informative resolution for a given clinical endpoint.
+              </p>
+
+            <br>
+              
             </div>
           </div>
         </div>
+
+        <h2 class="subtitle is-4" style="text-align: center;">How does it compare to other SSL and FMs?</h2>
+        <div class="columns is-centered">
+          <div class="column is-full" style="text-align: center;">
+            <div class="columns is-centered has-text-centered">
+              <div class="column is-two-thirds">
+              <div class="content has-text-justified interpolation-panel">
+                  <p style="text-align: center;font-size: 18px"> 
+                    For classification, HiMAE often outperforms or matches substantially larger baselines against both SSL and Existing Foundation Models across cardiovascular, sleep, and lab prediction tasks while being far more compact (e.g., HiMAE base ≈1.2M parameters).
+                  </p>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="column" style="text-align: center;">
+            <img src="resources/classification.png" alt="Image description" width="80%">
+          </div>
+
+          <h2 class="subtitle is-4" style="text-align: center;">How does it compare in different reconstruction regimes?</h2>
+          <div class="columns is-centered">
+            <div class="column is-full" style="text-align: center;">
+              <div class="columns is-centered has-text-centered">
+                <div class="column is-two-thirds">
+                <div class="content has-text-justified interpolation-panel">
+                    <p style="text-align: center;font-size: 18px"> 
+                      On generative benchmarks, HiMAE attains the lowest MSE and positive \(R^2\) even in challenging extrapolation scenarios, indicating robust reconstruction beyond mean-fill baselines.  
+                    </p>
+                </div>
+              </div>
+            </div>
+            <br>
+            <div class="column" style="text-align: center;">
+              <img src="resources/generative.png" alt="Image description" width="80%">
+            </div>
+            
+            <section class="section">
+              <h2>Discussion</h2>
+              <p>
+                The findings reframe resolution as a structural prior: rather than collapsing scale, exposing multi-resolution embeddings yields both improved performance and interpretability. HiMAE’s convolutional hierarchy provides a favorable inductive bias for wearable signals, allowing compact models to rival much larger transformers. Limitations include the focus on 10 s windows and PPG modality; extensions to longer contexts and multimodal signals (ECG, accelerometer, EEG) are promising future directions. Clinical validation of discovered resolution-specific signals is required before translation.
+              </p>
+            </section>
 
       
 

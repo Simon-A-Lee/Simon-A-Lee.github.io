@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Multimodal Clinical Pseudo-notes for Emergency Department Prediction Tasks using Multiple Embedding Model for EHR (MEME)</title>
+
+  <!-- <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet"> -->
+
+  <!-- <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script> -->
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+  <link rel="icon" href="./favicon.ico?">
+
+
+
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <meta property="og:image:width" content="1600" />
+  <meta property="og:image:height" content="900" />
+
+</head>
+<body>
+  <section class="hero">
+    <div class="hero-body no-bottom-padding">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">HiMAE: Hierarchical masked autoencoders discover resolution-specific structure in wearable time series</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a target="_blank" href="https://simonlee-a.github.io/">Simon A. Lee</a><sup>1,2</sup>&nbsp;&nbsp;&nbsp;
+                Cyrus Tanade<sup>1</sup>&nbsp;&nbsp;&nbsp;
+                Hao Zhou<sup>1</sup>&nbsp;&nbsp;&nbsp;
+                Juhyeon Lee<sup>1</sup>&nbsp;&nbsp;&nbsp;
+                Megha Thukral<sup>1</sup>&nbsp;&nbsp;&nbsp;
+                Minji Han<sup>1</sup>&nbsp;&nbsp;&nbsp;
+                Rachel Choi<sup>1</sup>&nbsp;&nbsp;&nbsp;
+                Md Sazzad Hissain Khan<sup>1</sup>&nbsp;&nbsp;&nbsp;
+                Baiying Lu<sup>1</sup>&nbsp;&nbsp;&nbsp;
+                Migyeong Gwak<sup>1</sup>&nbsp;&nbsp;&nbsp;
+                Mehrab Morshed<sup>1</sup>&nbsp;&nbsp;&nbsp;
+                Viswam Nathan<sup>1</sup>&nbsp;&nbsp;&nbsp;
+                Md Mahbubur Rahman<sup>1</sup>&nbsp;&nbsp;&nbsp;
+                Li Zhu<sup>1</sup>&nbsp;&nbsp;&nbsp;
+                Subramaniam Venkatraman<sup>1</sup>&nbsp;&nbsp;&nbsp;
+                Sharanya Desai<sup>1</sup>&nbsp;&nbsp;&nbsp;
+                <br /><sup>1</sup>Digital Health Team, Samsung Research America&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<sup>2</sup> Department of Computational Medicine, UCLA
+                <span class="brmod" style="color:rgb(183, 0, 0)"><b>2024</b></span>
+              </span>
+            </div>
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="resources/himae.pdf"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+
+                <!-- arXiv Link. -->
+                <span class="link-block">
+                  <a target="_blank" href="https://arxiv.org/abs/2510.25785" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+              
+                <span class="link-block">
+                  <a href="https://github.com/Simonlee711/HiMAE" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <svg class="svg-inline--fa fa-github fa-w-16" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" data-fa-i2svg=""><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg><!-- <i class="fab fa-github"></i> Font Awesome fontawesome.com -->
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <span class="link-block">
+                  <a href="https://openreview.net/forum?id=iPAy5VpGQa&referrer=%5Bthe%20profile%20of%20Simon%20A.%20Lee%5D(%2Fprofile%3Fid%3D~Simon_A._Lee1)"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fa fa-database"></i>
+                    </span>
+                    <span>OpenReview</span>
+                  </a>
+                </span>
+
+                <!-- Code Link. -->
+
+              </div>
+  
+            </div>
+            </div>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <div align="center">
+          <!-- Replace video with an image -->
+          <img src="./resources/Dalle.png" alt="VRB Initial Scene" width="100%">
+        </div>
+        <br>
+        <h2 class="subtitle has-text-centered">
+          Dall-E's attempt at visualizing the Clinical Pseudo-notes methodology. Close...
+        </h2>
+      </div>
+    </div>
+  </section>
+  
+
+  <section class="hero is-light is-small">
+    <div class="hero-body">
+      <div class="container is-two-thirds">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-two-thirds">
+            <h2 class="title is-3">Abstract</h2>
+          </div>
+      </div>
+    
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-two-thirds ">
+          <div class="content has-text-justified">
+            In this work, we introduce the Multiple Embedding Model for EHR (MEME), an approach that serializes multimodal EHR tabular data into text using pseudo-notes, mimicking clinical text generation. This conversion not only preserves better representations of categorical data and learns contexts but also enables the effective employment of pretrained foundation models for rich feature representation. To address potential issues with context length, our framework encodes embeddings for each EHR modality separately. We demonstrate the effectiveness of MEME by applying it to several decision support tasks within the Emergency Department across multiple hospital systems. Our findings indicate that MEME outperforms traditional machine learning, EHR-specific foundation models, and general LLMs, highlighting its potential as a general and extendible EHR representation strategy.
+          </div>
+        </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h1 class="title is-2" style="text-align: center; padding-bottom: 10px;">Transforming Electronic Health Records into text</h1>
+          <!-- <h2 class="subtitle is-4" style="text-align: center;">Defining Visual Affordances</h2> -->
+
+          <div class="columns is-centered has-text-centered">
+          <div class="column is-two-thirds ">
+          <div class="content has-text-justified">
+            <p>
+            One of our main contributions in our methodology is turning tabular Electronic Health Records (EHR) data into textual representations. By Doing so we are able to leverage pre-trained language models for feature representation. Given that the open source community continues to develop more advanced language models, we believe that this approach will be just as effective in the future.  
+            </p>
+          </div>
+        </div>
+      </div>
+        
+      <div class="column" style="text-align: center;">
+            <img src="resources/model.png" alt="Image description" width="40%">
+        </div>
+          <br>
+          <br>
+          <h2 class="subtitle is-4" style="text-align: center;">What are Electronic Health Records and Why are they important?</h2>
+          <div class="columns is-centered">
+            <div class="column is-full" style="text-align: center;">
+              <img src="resources/EHR.png" alt="Image description" width="40%">
+              <br>
+              <br>
+              <div class="columns is-centered has-text-centered">
+                <div class="column is-two-thirds">
+                <div class="content has-text-justified interpolation-panel">
+                    <p style="text-align: center;font-size: 18px"> An Electronic Health Record (EHR) is a digital version of a patient’s medical history that is maintained by the provider over time. It goes beyond the standard clinical data collected in a provider's office and can be inclusive of a broader view of a patient's care. EHRs are designed to contain and share information from all providers involved in a patient’s care. This can include demographics, progress notes, problems, medications, vital signs, past medical history, immunizations, laboratory data, and radiology reports. <br><br> EHR archives can be used to generate insights, test hypotheses, and develop predictive models. Most applications using the EHR models for decision support manifest as risk stratification models, or early warning systems. These applications ingest hand-identified and crafted EHR features to make a binary decision, which can be implemented as a flag
+ 
+                    </p>
+                </div>
+              </div>
+            </div>
+            <br>
+              
+        </div>
+      </div>
+    
+    <section class="section">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-full-width">
+            <h1 class="title is-2" style="text-align: center; padding-bottom: 10px;">Multiple Embedding Model for EHR (MEME) Architecture</h1>
+            <!-- <h2 class="subtitle is-4" style="text-align: center;">Defining Visual Affordances</h2> -->
+            <div class="column" style="text-align: center;">
+              <img src="resources/MEME.png" alt="Image description" width="40%">
+          </div>
+  
+            <div class="columns is-centered has-text-centered">
+            <div class="column is-two-thirds ">
+            <div class="content has-text-justified">
+              <p>
+                Our second main contribution is the Multiple Embedding Model for EHR architecture. We designed a methodology that takes pre-trained language models as representation models to generate multiple embeddings for our varying EHR input (e.g. medication, vitals, demographics). We then concatenate these embeddings and send this "patient embedding" through an additional self-attention layer where it learns the most important part of the inputs from the entire patient embedding. This model then gets fed to a MLP where it will be used for various downstream tasks in the Emergency Department.
+               </p>
+            </div>
+          </div>
+        </div>
+
+        <br>
+        <br>
+        <h2 class="subtitle is-4" style="text-align: center;">Why Multiple Embeddings?</h2>
+        <div class="columns is-centered">
+          <div class="column is-full" style="text-align: center;">
+            <div class="columns is-centered has-text-centered">
+              <div class="column is-two-thirds">
+              <div class="content has-text-justified interpolation-panel">
+                  <p style="text-align: center;font-size: 18px"> Our research demonstrates that multimodal embeddings offer superior performance, partly due to their ability to handle shorter context lengths a current bottleneck of the BERT architecture. We initially hypothesized that the use of multiple embeddings allows for comprehensive representation across diverse biological and temporal scales and different domains. By employing separate embeddings for molecular scale data (such as lab measurements and medications), system-level observations (including vital signs and diagnostic decisions), and external influences (like patient arrival times), we can capture unique aspects of patient attributes. This method provides a holistic understanding and enhances the effectiveness of patient care management, serving as our rationale for representing these concepts distinctly.</p>
+              </div>
+            </div>
+          </div>
+          <br>
+            
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-full-width">
+            <h1 class="title is-2" style="text-align: center; padding-bottom: 10px;">Experiments</h1>
+            <!-- <h2 class="subtitle is-4" style="text-align: center;">Defining Visual Affordances</h2> -->
+            <div class="columns is-centered has-text-centered">
+            <div class="column is-two-thirds ">
+            <div class="content has-text-justified">
+              <p>
+                To test our new architecture, we performed an evaluation benchmark of the MEME model on various ED disposition and decompensation tasks. We asked the models in the benchmark to predict whether a patient should be admitted to the Emergency Room at the time of their visit. From the subset of patients who were admitted, we conducted a multilabel classification task where we asked the models to predict whether admitted patients would be discharged home during their admission, needed to be admitted to the intensive care unit, or would die during their stay. We showcase the prevalences of these tasks in Table 1 below, where each subsequent task is deemed to be more difficult than the previous one.
+
+              <div class="column" style="text-align: center;">
+                <img src="resources/prevalance.png" alt="Image description" width="80%">
+            </div>
+
+            In our study we compared our method to three traditional machine learning models defined in a previous ED benchmark (logistic regression, random forest, and MLP), two EHR-foundation models (EHR-shot, and GenHPF), and a GPT3.5-turbo generative model. We evaluated all methods on the F1 score, the Area under the Reciever Operating Characteristic (AUROC), and the Area under the Precision Recall Curve (AUPRC).
+
+              </p>
+            </div>
+          </div>
+        </div>
+
+      
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="titile">BibTeX</h2>
+      <pre><code>@misc{lee2024multimodal,
+        title={Multimodal Clinical Pseudo-notes for Emergency Department Prediction Tasks using Multiple Embedding Model for EHR (MEME)},
+        author={Lee, Simon A and Jain, Sujay and Chen, Alex and Biswas, Arabdha and Fang, Jennifer and Rudas, Akos and Chiang, Jeffrey N},
+        journal={arXiv preprint arXiv:2402.00160},
+        year={2024}}</code></pre>
+    </div>
+  </section>
+  
+  
+  
+  
+  <section class="section">
+    <div class="container is-max-desktop content">
+      <h2 class="titile">Acknowledgements</h2>
+    <div class="is-vcentered interpolation-panel">
+      <div class="container content">
+        <p style = "font-size: 16px">
+          We thank Arabdha Biswas for helping us run a random forest model.         </p>
+      </div>
+    </div>
+  </div>  
+  </section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <br />
+      <p> Template from <a href="https://nerfies.github.io"><span class="dnerf">Nerfies</span></a>.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
+

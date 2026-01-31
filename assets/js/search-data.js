@@ -104,7 +104,7 @@ ninja.data = [{
           section: "News",},{id: "news-simon-s-first-project-on-wearable-foundation-models-at-samsung-is-publicly-available-on-arxiv",
           title: 'Simon’s first project on Wearable Foundation Models at Samsung is publicly available on...',
           description: "",
-          section: "News",},{id: "news-himae-simon-s-samsung-project-gets-accepted-into-the-international-conference-on-learning-representations-iclr-among-19-000-papers",
+          section: "News",},{id: "news-himae-simon-s-samsung-project-gets-accepted-into-the-international-conference-on-learning-representations-iclr-out-of-19-000-submissions",
           title: 'HiMAE, Simon’s Samsung project gets accepted into the International Conference on Learning Representations...',
           description: "",
           section: "News",},{id: "news-simon-will-join-google-research-in-the-future-to-work-on-multimodality",

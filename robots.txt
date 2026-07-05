@@ -1,1 +1,1 @@
-Sitemap: https://cogtoolslab.github.io//sitemap.xml
+User-agent: * Disallow: Sitemap: https://Simon-A-Lee.github.io/sitemap.xml
